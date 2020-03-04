@@ -16,23 +16,23 @@ public class CircularShift {
 	    {
 	    	word = new String[storage.length][storage.length];
 	    	String temp = "";
-            String temp2 = "";
-            for (int i = 0; i < storage.length; i++) 
-            {
-                temp = storage[0];
-                for (int j = 0; j < storage.length; j++) 
-                {
-                    temp2 = storage[(j + 1) % storage.length];
-                    storage[(j + 1) % storage.length] = temp;
-                    temp = temp2;
-                }
-                for (int j = 0; j < storage.length; j++) 
-                {
-                    word[i][j] = storage[j];
-                }
-            }
+            	String temp2 = "";
+            	for (int i = 0; i < storage.length; i++) 
+            	{
+                	temp = storage[0];
+               		for (int j = 0; j < storage.length; j++) 
+                	{
+                    		temp2 = storage[(j + 1) % storage.length];
+                    		storage[(j + 1) % storage.length] = temp;
+                    		temp = temp2;
+                	}
+                	for (int j = 0; j < storage.length; j++) 
+                	{
+                    		word[i][j] = storage[j];
+                	}
+            	}
         }
-	    else
+	else
         {
             word = new String[1][1];
             word[0][0] = storage[0];
